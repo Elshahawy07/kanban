@@ -1,0 +1,88 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 989;
+}
+.container form {
+  width: 400px;
+  padding: 20px 15px;
+  display: flex;
+  background-color: var(--component);
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  max-height: 80%;
+  overflow: scroll;
+  z-index: 989;
+}
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.title p {
+  width: 90%;
+}
+.title i {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--blue-violet);
+  cursor: pointer;
+}
+.inputBox {
+  display: flex;
+  flex-direction: column;
+}
+.inputBox select {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: solid 1px var(--light-color);
+  color: var(--color);
+  background-color: var(--component);
+}
+.inputBox select {
+  cursor: pointer;
+}
+.inputBox select:focus {
+  border: solid 1px var(--blue-violet);
+}
+.subtasks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px 0;
+}
+.subtasks .title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--light-color);
+}
+.subtask {
+  display: flex;
+  flex-direction: row;
+  background-color: blueviolet;
+  background-color: var(--background);
+  padding: 5px 10px;
+  gap: 10px;
+  border-radius: 10px;
+}
+.subtask input {
+  accent-color: var(--blue-violet);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}

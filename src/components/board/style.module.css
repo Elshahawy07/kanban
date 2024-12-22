@@ -1,0 +1,19 @@
+.container {
+  width: 100%;
+  height: calc(100vh - 70px);
+  position: absolute;
+  top: 70px;
+  z-index: 3;
+  overflow: scroll;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 10px;
+  z-index: 2;
+}
+@media (max-width: 768px) {
+  .container {
+    width: 100% !important;
+    left: 0px !important;
+  }
+}

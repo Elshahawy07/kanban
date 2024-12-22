@@ -1,0 +1,15 @@
+.container {
+  width: 300px;
+  min-height: 100%;
+  min-width: 250px;
+}
+.title {
+  color: var(--light-color);
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+.tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

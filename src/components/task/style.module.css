@@ -1,0 +1,27 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.task {
+  background-color: var(--component);
+  width: 90%;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+.title {
+  font-size: 16px;
+  font-weight: 700;
+}
+.done {
+  color: var(--light-color);
+  font-size: 12px;
+  font-weight: 700;
+}
+.done:hover,
+.title:hover {
+  color: var(--blue-violet);
+}
