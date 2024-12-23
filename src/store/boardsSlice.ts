@@ -6,7 +6,7 @@ import data from "../../data.json";
 
 const boardsAdapter = createEntityAdapter({
   selectId: (board: Board) => board.id,
-  sortComparer: (a: Board, b: Board) => a.name.localeCompare(b.name),
+  sortComparer: (a: Board, b: Board) => a.id.localeCompare(b.id),
 });
 
 const initialState = boardsAdapter.getInitialState<Board[]>(data.boards);
@@ -48,11 +48,11 @@ const boardsSlice = createSlice({
       state.entities[boardId].tasks = state.entities[boardId].tasks.filter(
         ({ id }) => id != task.id
       );
-    },
+    },    
   },
 });
 
-export const { setBoards, addBoard, addTask, editTask, deleteTask } =
+export const { setBoards, addBoard, addTask, editTask, deleteTask,deleteBoard } =
   boardsSlice.actions;
 
 export const selectBoards = (state: RootState) => state.boards;

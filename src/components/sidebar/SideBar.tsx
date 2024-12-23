@@ -1,6 +1,6 @@
 import { useState, Dispatch, SetStateAction } from "react";
-import { useAppSelector } from "../../store/index.js";
-import { selectBoards } from "../../store/boardsSlice.js";
+import { useAppDispatch, useAppSelector } from "../../store/index.js";
+import { deleteBoard, selectBoards } from "../../store/boardsSlice.js";
 import style from "./style.module.css";
 import AddBoard from "../addBoard/AddBoard.js";
 
@@ -17,6 +17,7 @@ const SideBar = ({
 }) => {
   const boards = useAppSelector(selectBoards);
   const [showForm, setShowForm] = useState(false);
+  const dispatch = useAppDispatch();
   return (
     <div
       className={style.container}
@@ -41,6 +42,10 @@ const SideBar = ({
             >
               <i className="fa-solid fa-bars-progress"></i>
               <div className={style.name}>{boards.entities[boardId].name}</div>
+              <i
+                className="fa-solid fa-trash"
+                onClick={() => dispatch(deleteBoard(boardId))}
+              ></i>
             </div>
           ))}
         </div>

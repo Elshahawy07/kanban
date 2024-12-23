@@ -36,10 +36,13 @@
   align-items: center;
   padding: 10px 25px;
   border-radius: 0 500px 500px 0;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 600;
   cursor: pointer;
   color: var(--blue-violet);
+}
+.name{
+  width: 200px;
 }
 .boards .board {
   color: var(--light-color);
